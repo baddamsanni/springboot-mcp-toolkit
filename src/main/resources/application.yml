@@ -10,14 +10,6 @@ spring:
   sql:
     init:
       mode: always
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,metrics
-
-spring:
   ai:
     mcp:
       server:
@@ -25,8 +17,28 @@ spring:
         streamable-http:
           mcp-endpoint: /mcp
 
-# reduce logging noise in tests
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  tracing:
+    enabled: true
+
 logging:
+  file:
+    path: logs/
+    name: ${logging.file.path}spring.log
   level:
     org.springframework: INFO
+
+config:
+  drift:
+    baseline:
+      path: classpath:baseline-config.yml
+
+tracing:
+  external:
+    api:
+      url: http://localhost:9411/api/v2/traces
 

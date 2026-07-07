@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/src/test/java/ai/toolkit/mcp/tool/DetectConfigDriftToolTest.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/test/java/ai/toolkit/mcp/tool/DetectConfigDriftToolTest.java" />
+              <option name="updatedContent" value="package ai.toolkit.mcp.tool;&#10;&#10;import ai.toolkit.mcp.McpToolkitApplication;&#10;import org.junit.jupiter.api.Test;&#10;import org.springframework.beans.factory.annotation.Autowired;&#10;import org.springframework.boot.test.context.SpringBootTest;&#10;&#10;import static org.assertj.core.api.Assertions.assertThat;&#10;&#10;@SpringBootTest(classes = McpToolkitApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)&#10;public class DetectConfigDriftToolTest {&#10;&#10;    @Autowired&#10;    DetectConfigDriftTool detectConfigDriftTool;&#10;&#10;    @Test&#10;    public void testDetectConfigDriftBasic() {&#10;        DetectConfigDriftTool.ConfigDriftReport report = detectConfigDriftTool.detectConfigDrift();&#10;        &#10;        assertThat(report).isNotNull();&#10;        assertThat(report.changedProperties).isNotNull();&#10;        assertThat(report.missingProperties).isNotNull();&#10;        assertThat(report.extraProperties).isNotNull();&#10;        assertThat(report.riskScore).isNotNull();&#10;        assertThat(report.riskScore).isGreaterThanOrEqualTo(0.0);&#10;    }&#10;&#10;    @Test&#10;    public void testDetectConfigDriftStructure() {&#10;        DetectConfigDriftTool.ConfigDriftReport report = detectConfigDriftTool.detectConfigDrift();&#10;        &#10;        // Verify report structure&#10;        for (DetectConfigDriftTool.PropertyDiff diff : report.changedProperties) {&#10;            assertThat(diff.key).isNotNull();&#10;            assertThat(diff.riskLevel).isIn(&quot;HIGH&quot;, &quot;MEDIUM&quot;, &quot;LOW&quot;);&#10;        }&#10;    }&#10;&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
