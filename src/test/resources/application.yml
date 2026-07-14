@@ -20,7 +20,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,metrics
+        include: health,metrics,token-usage
   endpoint:
     health:
       show-details: always
