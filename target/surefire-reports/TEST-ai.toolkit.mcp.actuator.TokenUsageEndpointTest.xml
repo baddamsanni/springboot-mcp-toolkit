@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ai.toolkit.mcp.tool.DatabaseSchemaToolTest" time="0.01" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ai.toolkit.mcp.actuator.TokenUsageEndpointTest" time="2.046" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -52,14 +52,14 @@
     <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
     <property name="java.io.tmpdir" value="/var/folders/tg/h2pq28x103s2rt0433pcdst80000gn/T/"/>
     <property name="catalina.home" value="/private/var/folders/tg/h2pq28x103s2rt0433pcdst80000gn/T/tomcat.0.11472854188062086498"/>
-    <property name="com.zaxxer.hikari.pool_number" value="2"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
     <property name="java.version" value="21.0.3"/>
     <property name="user.dir" value="/Users/sunny/springboot-mcp-toolkit"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="PID" value="41493"/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
-    <property name="catalina.base" value="/private/var/folders/tg/h2pq28x103s2rt0433pcdst80000gn/T/tomcat.0.15341072640743188033"/>
+    <property name="catalina.base" value="/private/var/folders/tg/h2pq28x103s2rt0433pcdst80000gn/T/tomcat.0.11472854188062086498"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/sunny/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="java.vm.info" value="mixed mode"/>
@@ -71,5 +71,49 @@
     <property name="java.class.version" value="65.0"/>
     <property name="LOGGED_APPLICATION_NAME" value="[springboot-mcp-toolkit] "/>
   </properties>
-  <testcase name="testSchemaIntrospection" classname="ai.toolkit.mcp.tool.DatabaseSchemaToolTest" time="0.007"/>
+  <testcase name="tokenUsageEndpointReflectsRecordedToolInvocations" classname="ai.toolkit.mcp.actuator.TokenUsageEndpointTest" time="0.49">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.0)
+
+2026-07-14T17:34:50.000-04:00  INFO 41493 --- [springboot-mcp-toolkit] [           main] a.t.mcp.actuator.TokenUsageEndpointTest  : Starting TokenUsageEndpointTest using Java 21.0.3 with PID 41493 (started by sunny in /Users/sunny/springboot-mcp-toolkit)
+2026-07-14T17:34:50.001-04:00  INFO 41493 --- [springboot-mcp-toolkit] [           main] a.t.mcp.actuator.TokenUsageEndpointTest  : No active profile set, falling back to 1 default profile: "default"
+2026-07-14T17:34:50.484-04:00  WARN 41493 --- [springboot-mcp-toolkit] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerAutoConfiguration' of type [org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [serverAnnotatedMethodBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-07-14T17:34:50.485-04:00  WARN 41493 --- [springboot-mcp-toolkit] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'serverAnnotatedBeanRegistry' of type [org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerAutoConfiguration$ServerMcpAnnotatedBeans] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [serverAnnotatedMethodBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-07-14T17:34:50.490-04:00  WARN 41493 --- [springboot-mcp-toolkit] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.ai.mcp.server.annotation-scanner-org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerProperties' of type [org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [serverAnnotatedMethodBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-07-14T17:34:50.579-04:00  INFO 41493 --- [springboot-mcp-toolkit] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-07-14T17:34:50.584-04:00  INFO 41493 --- [springboot-mcp-toolkit] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-14T17:34:50.585-04:00  INFO 41493 --- [springboot-mcp-toolkit] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-14T17:34:50.601-04:00  INFO 41493 --- [springboot-mcp-toolkit] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-14T17:34:50.602-04:00  INFO 41493 --- [springboot-mcp-toolkit] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 595 ms
+2026-07-14T17:34:50.641-04:00  WARN 41493 --- [springboot-mcp-toolkit] [           main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'token-usage' contains invalid characters, please migrate to a valid format.
+2026-07-14T17:34:50.691-04:00  INFO 41493 --- [springboot-mcp-toolkit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-14T17:34:50.757-04:00  INFO 41493 --- [springboot-mcp-toolkit] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb_339f4184-1ed7-42f2-85b6-49b90502f34e user=SA
+2026-07-14T17:34:50.758-04:00  INFO 41493 --- [springboot-mcp-toolkit] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-14T17:34:51.093-04:00  WARN 41493 --- [springboot-mcp-toolkit] [           main] o.s.m.provider.tool.SyncMcpToolProvider  : No tool methods found in the provided tool objects: []
+2026-07-14T17:34:51.097-04:00  INFO 41493 --- [springboot-mcp-toolkit] [           main] o.s.a.m.s.c.a.McpServerAutoConfiguration : Enable tools capabilities, notification: true
+2026-07-14T17:34:51.098-04:00  INFO 41493 --- [springboot-mcp-toolkit] [           main] o.s.a.m.s.c.a.McpServerAutoConfiguration : Enable resources capabilities, notification: true
+2026-07-14T17:34:51.098-04:00  INFO 41493 --- [springboot-mcp-toolkit] [           main] o.s.a.m.s.c.a.McpServerAutoConfiguration : Enable resources templates capabilities, notification: true
+2026-07-14T17:34:51.098-04:00  INFO 41493 --- [springboot-mcp-toolkit] [           main] o.s.a.m.s.c.a.McpServerAutoConfiguration : Enable prompts capabilities, notification: true
+2026-07-14T17:34:51.099-04:00  INFO 41493 --- [springboot-mcp-toolkit] [           main] o.s.a.m.s.c.a.McpServerAutoConfiguration : Enable completions capabilities
+2026-07-14T17:34:51.191-04:00  INFO 41493 --- [springboot-mcp-toolkit] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-07-14T17:34:51.228-04:00  INFO 41493 --- [springboot-mcp-toolkit] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 64638 (http) with context path '/'
+2026-07-14T17:34:51.235-04:00  INFO 41493 --- [springboot-mcp-toolkit] [           main] a.t.mcp.actuator.TokenUsageEndpointTest  : Started TokenUsageEndpointTest in 1.385 seconds (process running for 1.76)
+2026-07-14T17:34:51.688-04:00  INFO 41493 --- [springboot-mcp-toolkit] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-14T17:34:51.688-04:00  INFO 41493 --- [springboot-mcp-toolkit] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-14T17:34:51.689-04:00  INFO 41493 --- [springboot-mcp-toolkit] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+]]></system-out>
+    <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/sunny/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.5/byte-buddy-agent-1.17.5.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
 </testsuite>

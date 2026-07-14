@@ -1,3 +1,5 @@
+ai/toolkit/mcp/actuator/TokenUsageEndpoint$ToolSummary.class
+ai/toolkit/mcp/actuator/TokenUsageEndpoint$SessionDetailResponse.class
 ai/toolkit/mcp/resource/OpenApiResourceConfig.class
 ai/toolkit/mcp/tool/DatabaseSchemaTool$ForeignKeyInfo.class
 ai/toolkit/mcp/tool/DatabaseSchemaTool$ColumnInfo.class
@@ -10,9 +12,14 @@ ai/toolkit/mcp/tool/GetTraceByIdTool.class
 ai/toolkit/mcp/tool/AnalyzeThreadDumpTool.class
 ai/toolkit/mcp/tool/RunDiagnosticWorkflowTool$DiagnosticReport.class
 ai/toolkit/mcp/tool/AnalyzeThreadDumpTool$ThreadDetail.class
+ai/toolkit/mcp/tracking/ToolInvocationRecorder.class
 ai/toolkit/mcp/tool/ExplainQueryPlanTool.class
+ai/toolkit/mcp/actuator/TokenUsageEndpoint.class
+ai/toolkit/mcp/actuator/TokenUsageEndpoint$SessionSummary.class
 ai/toolkit/mcp/tool/DetectConfigDriftTool.class
+ai/toolkit/mcp/actuator/TokenUsageEndpoint$ToolSummaryResponse.class
 ai/toolkit/mcp/tool/EndpointMetricsTool$EndpointMetrics.class
+ai/toolkit/mcp/tracking/TokenEstimator.class
 ai/toolkit/mcp/tool/GetTraceByIdTool$TraceData.class
 ai/toolkit/mcp/tool/GetTraceByIdTool$Span.class
 ai/toolkit/mcp/tool/AnalyzeCachePerformanceTool$CacheStats.class
@@ -24,7 +31,9 @@ ai/toolkit/mcp/tool/DetectConfigDriftTool$ConfigDriftReport.class
 ai/toolkit/mcp/tool/GetTraceByIdTool$SpanError.class
 ai/toolkit/mcp/tool/EndpointMetricsTool.class
 ai/toolkit/mcp/tool/AnalyzeCachePerformanceTool.class
+ai/toolkit/mcp/actuator/TokenUsageEndpoint$InvocationDetail.class
 ai/toolkit/mcp/McpToolkitApplication.class
+ai/toolkit/mcp/actuator/TokenUsageEndpoint$SessionSummaryResponse.class
 ai/toolkit/mcp/tool/ExplainQueryPlanTool$QueryPlan.class
 ai/toolkit/mcp/tool/AnalyzeRecentLogsTool$LogAnalysisResult.class
 ai/toolkit/mcp/tool/AnalyzeCachePerformanceTool$CachePerformanceReport.class

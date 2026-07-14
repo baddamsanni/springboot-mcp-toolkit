@@ -1,3 +1,4 @@
+/Users/sunny/springboot-mcp-toolkit/src/test/java/ai/toolkit/mcp/actuator/TokenUsageEndpointTest.java
 /Users/sunny/springboot-mcp-toolkit/src/test/java/ai/toolkit/mcp/tool/AnalyzeCachePerformanceToolTest.java
 /Users/sunny/springboot-mcp-toolkit/src/test/java/ai/toolkit/mcp/tool/AnalyzeRecentLogsToolTest.java
 /Users/sunny/springboot-mcp-toolkit/src/test/java/ai/toolkit/mcp/tool/AnalyzeThreadDumpToolTest.java
@@ -8,3 +9,4 @@
 /Users/sunny/springboot-mcp-toolkit/src/test/java/ai/toolkit/mcp/tool/GetTraceByIdToolTest.java
 /Users/sunny/springboot-mcp-toolkit/src/test/java/ai/toolkit/mcp/tool/RunDiagnosticWorkflowToolTest.java
 /Users/sunny/springboot-mcp-toolkit/src/test/java/ai/toolkit/mcp/tool/SimpleUnitTest.java
+/Users/sunny/springboot-mcp-toolkit/src/test/java/ai/toolkit/mcp/tracking/TokenEstimatorTest.java
