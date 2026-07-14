@@ -1,0 +1,12 @@
+/Users/sunny/springboot-mcp-toolkit/src/main/java/ai/toolkit/mcp/McpToolkitApplication.java
+/Users/sunny/springboot-mcp-toolkit/src/main/java/ai/toolkit/mcp/config/DemoEndpointController.java
+/Users/sunny/springboot-mcp-toolkit/src/main/java/ai/toolkit/mcp/resource/OpenApiResourceConfig.java
+/Users/sunny/springboot-mcp-toolkit/src/main/java/ai/toolkit/mcp/tool/AnalyzeCachePerformanceTool.java
+/Users/sunny/springboot-mcp-toolkit/src/main/java/ai/toolkit/mcp/tool/AnalyzeRecentLogsTool.java
+/Users/sunny/springboot-mcp-toolkit/src/main/java/ai/toolkit/mcp/tool/AnalyzeThreadDumpTool.java
+/Users/sunny/springboot-mcp-toolkit/src/main/java/ai/toolkit/mcp/tool/DatabaseSchemaTool.java
+/Users/sunny/springboot-mcp-toolkit/src/main/java/ai/toolkit/mcp/tool/DetectConfigDriftTool.java
+/Users/sunny/springboot-mcp-toolkit/src/main/java/ai/toolkit/mcp/tool/EndpointMetricsTool.java
+/Users/sunny/springboot-mcp-toolkit/src/main/java/ai/toolkit/mcp/tool/ExplainQueryPlanTool.java
+/Users/sunny/springboot-mcp-toolkit/src/main/java/ai/toolkit/mcp/tool/GetTraceByIdTool.java
+/Users/sunny/springboot-mcp-toolkit/src/main/java/ai/toolkit/mcp/tool/RunDiagnosticWorkflowTool.java

@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: springboot-mcp-toolkit
+  datasource:
+    url: jdbc:h2:mem:testdb_${random.uuid};DB_CLOSE_DELAY=-1;MODE=MySQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  sql:
+    init:
+      mode: always
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+server:
+  port: 0
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    ai.toolkit.mcp: INFO
+  file:
+    name: /tmp/application-test.log

@@ -1,9 +1,9 @@
 package ai.toolkit.mcp.tool;
 
-import ai.toolkit.mcp.McpToolkitApplication;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import ai.toolkit.mcp.TestApplication;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Locale;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest(classes = McpToolkitApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(classes = TestApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class DatabaseSchemaToolTest {
 
     @Autowired
