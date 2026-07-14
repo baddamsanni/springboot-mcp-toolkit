@@ -103,6 +103,35 @@ Agent correlates results and gives root-cause hypothesis
 You make the fix
 ```
 
+## Token Usage Tracking
+
+Every `@Tool` call is intercepted by a Spring AOP aspect and recorded to the embedded H2 `tool_invocation` table: session id, tool name, estimated input/output tokens, duration, and timestamp.
+
+Session id comes from the `X-MCP-Session-Id` request header when present; otherwise a UUID generated once at server startup is used as a fallback for the process lifetime.
+
+Token counts are character-length estimates (`1 token ≈ 4 chars`), not exact tokenizer output from an LLM provider. Recording failures are logged and never break the tool response.
+
+Expose and inspect usage via the custom Actuator endpoint:
+
+| Method | Path | Returns |
+|--------|------|---------|
+| GET | `/actuator/token-usage` | Per-session totals (calls, input/output/total estimates, first/last call) |
+| GET | `/actuator/token-usage/{sessionId}` | Per-call detail for one session |
+| GET | `/actuator/token-usage/by-tool` | Totals grouped by tool name across all sessions |
+
+Every response includes:
+
+```text
+Token counts are character-length estimates (1 token ≈ 4 chars), not exact tokenizer output.
+```
+
+Example:
+
+```bash
+curl http://localhost:8081/actuator/token-usage
+curl http://localhost:8081/actuator/token-usage/by-tool
+```
+
 ## Enterprise Install
 
 Enterprise Maven setups are typically locked to an internal registry (JFrog Artifactory, Sonatype Nexus). This toolkit is designed for that workflow — no Maven Central dependency required at runtime.
@@ -163,15 +192,16 @@ H2 is bundled. All other drivers must be added to the classpath.
 - Java 21
 - Spring Boot 3.5
 - Spring AI 1.1.8 (MCP server, Streamable HTTP transport)
-- Micrometer / Spring Boot Actuator
+- Micrometer / Spring Boot Actuator (includes custom `token-usage` endpoint)
+- Spring AOP (tool invocation recording)
 - JSqlParser 4.9
-- H2 (embedded, for local dev and CI)
+- H2 (embedded, for local dev, CI, and token usage persistence)
 
 ## Contributing
 
 - This project ships a new tool or improvement every week.
 - Open an issue if you want a tool that does not exist yet.
-- PRs welcome — run `mvn test` before submitting, all 25 tests must pass.
+- PRs welcome — run `mvn test` before submitting, all 30 tests must pass.
 
 ## License
 
