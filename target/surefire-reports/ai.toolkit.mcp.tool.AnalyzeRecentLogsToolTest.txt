@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ai.toolkit.mcp.tool.AnalyzeRecentLogsToolTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s -- in ai.toolkit.mcp.tool.AnalyzeRecentLogsToolTest
