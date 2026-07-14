@@ -20,6 +20,8 @@ public class AnalyzeCachePerformanceTool {
         CachePerformanceReport report = new CachePerformanceReport();
         report.caches = new HashMap<>();
         report.totalCaches = 0;
+        report.averageHitRatio = 0.0;
+        report.totalEvictions = 0L;
 
         for (CacheManager manager : cacheManagers) {
             Collection<String> cacheNames = manager.getCacheNames();
@@ -118,7 +120,7 @@ public class AnalyzeCachePerformanceTool {
     public static class CachePerformanceReport {
         public Map<String, CacheStats> caches;
         public Integer totalCaches;
-        public Double averageHitRatio;
+        public Double averageHitRatio = 0.0;
         public Long totalEvictions = 0L;
     }
 

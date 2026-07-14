@@ -1,12 +1,10 @@
-ai/toolkit/mcp/tool/AnalyzeThreadDumpToolTest.class
-ai/toolkit/mcp/tool/SimpleUnitTest.class
-ai/toolkit/mcp/TestMcpConfiguration.class
-ai/toolkit/mcp/tool/GetTraceByIdToolTest.class
-ai/toolkit/mcp/tool/ExplainQueryPlanToolTest.class
 ai/toolkit/mcp/tool/DatabaseSchemaToolTest.class
+ai/toolkit/mcp/tool/AnalyzeThreadDumpToolTest.class
 ai/toolkit/mcp/tool/DetectConfigDriftToolTest.class
 ai/toolkit/mcp/tool/AnalyzeCachePerformanceToolTest.class
+ai/toolkit/mcp/tool/SimpleUnitTest.class
 ai/toolkit/mcp/tool/EndpointMetricsToolTest.class
 ai/toolkit/mcp/tool/RunDiagnosticWorkflowToolTest.class
 ai/toolkit/mcp/tool/AnalyzeRecentLogsToolTest.class
-ai/toolkit/mcp/TestApplication.class
+ai/toolkit/mcp/tool/GetTraceByIdToolTest.class
+ai/toolkit/mcp/tool/ExplainQueryPlanToolTest.class
