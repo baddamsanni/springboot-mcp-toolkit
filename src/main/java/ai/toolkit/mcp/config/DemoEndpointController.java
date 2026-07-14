@@ -22,6 +22,5 @@ public class DemoEndpointController {
         // purely demo; do not touch DB
         return ResponseEntity.ok(Map.of("id", id, "name", "Demo Customer"));
     }
-
 }
 
